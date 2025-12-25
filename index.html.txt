@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин Шпона</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { font-family: sans-serif; background-color: var(--tg-theme-bg-color); color: var(--tg-theme-text-color); padding: 20px; }
+        .card { border: 1px solid #ccc; border-radius: 10px; padding: 10px; margin-bottom: 10px; background: var(--tg-theme-secondary-bg-color); }
+        .btn { background-color: var(--tg-theme-button-color); color: var(--tg-theme-button-text-color); border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%; margin-top: 10px;}
+        img { width: 100%; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Каталог Шпона</h1>
+    
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150?text=Дуб+Натуральный" alt="Дуб">
+        <h3>Шпон Дуб (Натуральный)</h3>
+        <p>Толщина: 0.6 мм. Сорт: А</p>
+        <p><b>Цена: 450 руб/м2</b></p>
+        <button class="btn" onclick="addToCart('Дуб', 450)">Добавить в заказ</button>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300x150?text=Орех+Американский" alt="Орех">
+        <h3>Шпон Орех Американский</h3>
+        <p>Толщина: 0.6 мм. Сорт: А</p>
+        <p><b>Цена: 850 руб/м2</b></p>
+        <button class="btn" onclick="addToCart('Орех', 850)">Добавить в заказ</button>
+    </div>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand(); // Развернуть на весь экран
+
+        let order = [];
+
+        function addToCart(item, price) {
+            order.push({item, price});
+            // Показываем главную кнопку "Оформить заказ"
+            tg.MainButton.text = `Оформить (${order.length} шт.)`;
+            tg.MainButton.show();
+        }
+
+        // Отправка данных боту при нажатии на MainButton
+        Telegram.WebApp.onEvent('mainButtonClicked', function(){
+            tg.sendData(JSON.stringify(order)); 
+        });
+    </script>
+</body>
+</html>
