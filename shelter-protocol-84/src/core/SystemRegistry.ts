@@ -1,0 +1,11 @@
+import * as m1 from './TurnRules';
+import * as m5 from '../config/RuntimeData';
+import * as m6 from '../systems/ConstructionSystem';
+import * as m8 from '../systems/ExpeditionSystem';
+import * as m9 from '../systems/LifeSupportSystem';
+import * as m11 from './SaveRules';
+import * as m12 from '../systems/RefugeeManager';
+import * as m13 from '../systems/PopulationSystem';
+import * as m15 from '../systems/ScenarioDirector';
+import * as m16 from '../systems/IncidentSystem';
+export const coreModules=[m1,m5,m6,m8,m9,m11,m12,m13,m15,m16];

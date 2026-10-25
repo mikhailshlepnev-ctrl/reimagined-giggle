@@ -1,0 +1,945 @@
+{
+  "version": 1,
+  "sourceSha256": "304148e4515626860149e2d139b0d000e3da27618659998254aa5acaaf65bec0",
+  "assets": [
+    {
+      "id": "asset-000",
+      "catalogField": "scenarioVisuals.ice.image",
+      "mimeType": "image/jpeg",
+      "byteLength": 320091,
+      "sha256": "3ecc2f97d9c124e5ce012081d282469732fe8b286bbf616cd718d31aaaae8cd8",
+      "sourceFields": [
+        "scenarioVisuals.ice.image"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-001",
+      "catalogField": "scenarioVisuals.heat.image",
+      "mimeType": "image/jpeg",
+      "byteLength": 293496,
+      "sha256": "7e3faa4be251e4191463f00410d2c2053478499a097186b1a531eaf3280440ea",
+      "sourceFields": [
+        "scenarioVisuals.heat.image"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-002",
+      "catalogField": "scenarioVisuals.nuclear.image",
+      "mimeType": "image/jpeg",
+      "byteLength": 273448,
+      "sha256": "d57b2125c26c9c5b03f3c1b779ad219ea6ca8e6afef8f7e4465f8e1579988921",
+      "sourceFields": [
+        "scenarioVisuals.nuclear.image"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-003",
+      "catalogField": "scenarioVisuals.epidemic.image",
+      "mimeType": "image/jpeg",
+      "byteLength": 88764,
+      "sha256": "d15c977e3f27bc22c8748cb105712477394ba90c893b773e945e49dbd4f87824",
+      "sourceFields": [
+        "scenarioVisuals.epidemic.image"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-004",
+      "catalogField": "PREDEL_VOICE_DATA.intro_ice",
+      "mimeType": "audio/mpeg",
+      "byteLength": 168912,
+      "sha256": "be29a5d49e32518bffa91aad4998fe0fe7ea08391a8424efd697593485e47a58",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.intro_ice"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-005",
+      "catalogField": "PREDEL_VOICE_DATA.intro_heat",
+      "mimeType": "audio/mpeg",
+      "byteLength": 137232,
+      "sha256": "52d4a4522eeac62a46ca0f792664f0f45eee5cb9058246c95545cfa2de8cf396",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.intro_heat"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-006",
+      "catalogField": "PREDEL_VOICE_DATA.intro_nuclear",
+      "mimeType": "audio/mpeg",
+      "byteLength": 156960,
+      "sha256": "2b672e78a14475fab05c9db3e43e2f5859ed3600530904488cf1b69b81531e8c",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.intro_nuclear"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-007",
+      "catalogField": "PREDEL_VOICE_DATA.intro_epidemic",
+      "mimeType": "audio/mpeg",
+      "byteLength": 168768,
+      "sha256": "a6b230b3e952bfa64c2cc88cdb732b86e0a6e553e5715a66c85bf4ca96d3d27e",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.intro_epidemic"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-008",
+      "catalogField": "PREDEL_VOICE_DATA.welcome",
+      "mimeType": "audio/mpeg",
+      "byteLength": 47520,
+      "sha256": "f25df57edd06190d1401c52285ac267aae18bc1b7c1ff07e250d156173b37ae2",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.welcome"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-009",
+      "catalogField": "PREDEL_VOICE_DATA.site",
+      "mimeType": "audio/mpeg",
+      "byteLength": 41040,
+      "sha256": "0acd1b878ae9b863f8e677710e786ff7538b50b74a4ca602f15823e59bc6c46e",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.site"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-010",
+      "catalogField": "PREDEL_VOICE_DATA.build",
+      "mimeType": "audio/mpeg",
+      "byteLength": 45648,
+      "sha256": "fdb13ad39ee355c54ffc8ff19ac75c8523164248a96be1d9995dd559ddfcc03d",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.build"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-011",
+      "catalogField": "PREDEL_VOICE_DATA.upgrade",
+      "mimeType": "audio/mpeg",
+      "byteLength": 35712,
+      "sha256": "b9103d7a875c874e191d9734134c7e54e585efb6d15fe851941e6ee83be9f226",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.upgrade"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-012",
+      "catalogField": "PREDEL_VOICE_DATA.need_resources",
+      "mimeType": "audio/mpeg",
+      "byteLength": 44496,
+      "sha256": "9674a373de13ab6b0efe0b791764b2299cb4b55badef853ddfb36a17177c5bf3",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.need_resources"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-013",
+      "catalogField": "PREDEL_VOICE_DATA.printerReady",
+      "mimeType": "audio/mpeg",
+      "byteLength": 46800,
+      "sha256": "7caf7e492d6b4f4e56df6d5e00a3e7d80a5b3b8d3aafb364e1c76778163d4269",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.printerReady"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-014",
+      "catalogField": "PREDEL_VOICE_DATA.printerUpgrade",
+      "mimeType": "audio/mpeg",
+      "byteLength": 41760,
+      "sha256": "536f7bd31746782d5250f06cfa06c088d6e1f63779f710d37c51e0d94fec22fe",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.printerUpgrade"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-015",
+      "catalogField": "PREDEL_VOICE_DATA.partsReady",
+      "mimeType": "audio/mpeg",
+      "byteLength": 34272,
+      "sha256": "a84ed3cdd9a70830fac4d7008fe6735e60bc6e039239a922b8bc70b44bdd16d2",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.partsReady"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-016",
+      "catalogField": "PREDEL_VOICE_DATA.gearReady",
+      "mimeType": "audio/mpeg",
+      "byteLength": 37152,
+      "sha256": "60fa49064df53ab2d9d576c7b21e28a9957501d9fd612b448e66b5ae1e31db96",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.gearReady"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-017",
+      "catalogField": "PREDEL_VOICE_DATA.repair",
+      "mimeType": "audio/mpeg",
+      "byteLength": 38448,
+      "sha256": "15ab6acca3afa9d4a1e4bb8fd1f59af790e8741294458c8955caa017d682c18a",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.repair"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-018",
+      "catalogField": "PREDEL_VOICE_DATA.repairBlocked",
+      "mimeType": "audio/mpeg",
+      "byteLength": 52128,
+      "sha256": "3677c107a95997bceea95591589377edbf385255ca4f199cc967eb830f874070",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.repairBlocked"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-019",
+      "catalogField": "PREDEL_VOICE_DATA.damage",
+      "mimeType": "audio/mpeg",
+      "byteLength": 49104,
+      "sha256": "ef6d9fa424144b1c36eff608a41ceff79fdc2558b589b10cc577e381e2f9ff9e",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.damage"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-020",
+      "catalogField": "PREDEL_VOICE_DATA.scout_depart",
+      "mimeType": "audio/mpeg",
+      "byteLength": 37728,
+      "sha256": "1679713613098f81a67030aed847714c711a8ef422c3f7edf9703770817b9c85",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.scout_depart"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-021",
+      "catalogField": "PREDEL_VOICE_DATA.scout_found",
+      "mimeType": "audio/mpeg",
+      "byteLength": 44640,
+      "sha256": "c3b6fc1193c6b43f07d7ba6b85e0e312851fb28517210147c97cb8291c7c0ecf",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.scout_found"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-022",
+      "catalogField": "PREDEL_VOICE_DATA.scout_return",
+      "mimeType": "audio/mpeg",
+      "byteLength": 36864,
+      "sha256": "3eb4e9d84e97a5446b40479ec21ca220b547aa97ca2008856f85c5cc285e3c84",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.scout_return"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-023",
+      "catalogField": "PREDEL_VOICE_DATA.scout_loss",
+      "mimeType": "audio/mpeg",
+      "byteLength": 62208,
+      "sha256": "5993c18641af66f3f253cdbe1a75c7ca2b4b241d3a5d9f63195fb19ff89bc80d",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.scout_loss"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-024",
+      "catalogField": "PREDEL_VOICE_DATA.drone",
+      "mimeType": "audio/mpeg",
+      "byteLength": 45360,
+      "sha256": "a55b8eaad6b9296fec4dc13a4b390c48c4cf924bb5ecf43195dd5daf620c9bdd",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.drone"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-025",
+      "catalogField": "PREDEL_VOICE_DATA.mission_success",
+      "mimeType": "audio/mpeg",
+      "byteLength": 38880,
+      "sha256": "aaea4a5fb61a63d66879ae68f516f27d7c77c7568520d9b793503b62d1e872e4",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.mission_success"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-026",
+      "catalogField": "PREDEL_VOICE_DATA.mission_loss",
+      "mimeType": "audio/mpeg",
+      "byteLength": 43632,
+      "sha256": "d64c2e8e4f7dae47d22d4c64e3dbb1372fda1e4b23e2fa2bf9ee086a7de933b5",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.mission_loss"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-027",
+      "catalogField": "PREDEL_VOICE_DATA.mission_total_loss",
+      "mimeType": "audio/mpeg",
+      "byteLength": 60192,
+      "sha256": "fcc6da24905dccb7a570fad9a9626a13a53f215eff77afd75308e035beb2fb6c",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.mission_total_loss"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-028",
+      "catalogField": "PREDEL_VOICE_DATA.city_closed",
+      "mimeType": "audio/mpeg",
+      "byteLength": 51120,
+      "sha256": "9b896865dd0a83d2f298df68b4fa44e0db1680afd5f94c127cd62119e78148d2",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.city_closed"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-029",
+      "catalogField": "PREDEL_VOICE_DATA.contact",
+      "mimeType": "audio/mpeg",
+      "byteLength": 43344,
+      "sha256": "c760b900fda22a22d37cb9985f41349a2b2eb99ec050460a05e185a2ad8a3864",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.contact"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-030",
+      "catalogField": "PREDEL_VOICE_DATA.trade",
+      "mimeType": "audio/mpeg",
+      "byteLength": 42480,
+      "sha256": "9baf2a3b42d457c6e6369153bdf676d6154ca29db5079da9c4834ec902e8c621",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.trade"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-031",
+      "catalogField": "PREDEL_VOICE_DATA.refugee_arrival",
+      "mimeType": "audio/mpeg",
+      "byteLength": 61200,
+      "sha256": "a713d79b1b8bb155cd8f7bfa16511604fbef20b8d0ec72b373854785e67b864d",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.refugee_arrival"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-032",
+      "catalogField": "PREDEL_VOICE_DATA.refugee_accepted",
+      "mimeType": "audio/mpeg",
+      "byteLength": 63216,
+      "sha256": "5b06ad7b2cca103c7589a3be9436e341fdfc13c70641b40af8bc421a8e3b337c",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.refugee_accepted"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-033",
+      "catalogField": "PREDEL_VOICE_DATA.refugee_refused",
+      "mimeType": "audio/mpeg",
+      "byteLength": 56592,
+      "sha256": "15dbb3a2b695ec42d22bac1aa4501a454c2f303d9ac6675c1cf522620413b158",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.refugee_refused"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-034",
+      "catalogField": "PREDEL_VOICE_DATA.casualty",
+      "mimeType": "audio/mpeg",
+      "byteLength": 61920,
+      "sha256": "14880b369f46fd9c88eb48fba257140afb839a0ac984bbc00ca982fd45cdf9e9",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.casualty"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-035",
+      "catalogField": "PREDEL_VOICE_DATA.water_shortage",
+      "mimeType": "audio/mpeg",
+      "byteLength": 66816,
+      "sha256": "8ff784b0d61c2817d26e50a5378cbeb5b6b4a2d108b95d4f75d6cf37256c7250",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.water_shortage"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-036",
+      "catalogField": "PREDEL_VOICE_DATA.farm_water",
+      "mimeType": "audio/mpeg",
+      "byteLength": 50112,
+      "sha256": "3b5b1acb15d3a9bd874d99963457e6ee5d96fe9a01308a480f28d4c599303697",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.farm_water"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-037",
+      "catalogField": "PREDEL_VOICE_DATA.shortage",
+      "mimeType": "audio/mpeg",
+      "byteLength": 58320,
+      "sha256": "a48583c508e4860eef39d2f89f66ee563b605643a577140432eb578ef4d014ab",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.shortage"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-038",
+      "catalogField": "PREDEL_VOICE_DATA.low_health",
+      "mimeType": "audio/mpeg",
+      "byteLength": 46512,
+      "sha256": "8e789158f6df48683c095a3e7d4a22833ea3f414f233c6dc49a4a525a763c2d4",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.low_health"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-039",
+      "catalogField": "PREDEL_VOICE_DATA.month_normal",
+      "mimeType": "audio/mpeg",
+      "byteLength": 51120,
+      "sha256": "1be556b0865fe3c3ce8a37b3c325f86bafe725549f949a91145584151c25bbce",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.month_normal"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-040",
+      "catalogField": "PREDEL_VOICE_DATA.month_danger",
+      "mimeType": "audio/mpeg",
+      "byteLength": 63648,
+      "sha256": "9d3e276041e128fea17fde2f7e0d01f3b24374d988aaa77bbc56ba71d7244c32",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.month_danger"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-041",
+      "catalogField": "PREDEL_VOICE_DATA.storm",
+      "mimeType": "audio/mpeg",
+      "byteLength": 62208,
+      "sha256": "022fbb5f88671302ba332ee807b74017aa742d15ba4d335e4c11f6764dd40eaf",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.storm"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-042",
+      "catalogField": "PREDEL_VOICE_DATA.storm_clear",
+      "mimeType": "audio/mpeg",
+      "byteLength": 45360,
+      "sha256": "3b6a6931e0c7c16861f69b29213b31bfa3e8a263f246583606312f376383f27b",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.storm_clear"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-043",
+      "catalogField": "PREDEL_VOICE_DATA.milestone",
+      "mimeType": "audio/mpeg",
+      "byteLength": 51552,
+      "sha256": "51ba2cf2bf64af91997724fc33949099f8acc35cd95c55cb6dfb51aa66d79c03",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.milestone"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-044",
+      "catalogField": "PREDEL_VOICE_DATA.techUnlocked",
+      "mimeType": "audio/mpeg",
+      "byteLength": 42912,
+      "sha256": "5b26b374fcf045e437b9d61a376b63d8b66cd5ccbbc946ff91ab09517a3cd6f5",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.techUnlocked"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-045",
+      "catalogField": "PREDEL_VOICE_DATA.phase_collapse",
+      "mimeType": "audio/mpeg",
+      "byteLength": 64944,
+      "sha256": "3a65d3fd218160bea2ff7307e48fe93585cdfe1c53ee58632c6a21b79755d72d",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.phase_collapse"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-046",
+      "catalogField": "PREDEL_VOICE_DATA.phase_crisis",
+      "mimeType": "audio/mpeg",
+      "byteLength": 57168,
+      "sha256": "a192629ffe4cddc5e9479970bd75508b08c960ff9944c4e0a29de57ae18ffdc8",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.phase_crisis"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-047",
+      "catalogField": "PREDEL_VOICE_DATA.phase_new",
+      "mimeType": "audio/mpeg",
+      "byteLength": 65952,
+      "sha256": "f618db398626c81686bd272541fd46d0e04a5727c0382c8cd56c64765600d28e",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.phase_new"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-048",
+      "catalogField": "PREDEL_VOICE_DATA.victory",
+      "mimeType": "audio/mpeg",
+      "byteLength": 91440,
+      "sha256": "b946c908ecacf663032bb619de7ea06150baae8345c1ac72842d627cd56b5c77",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.victory"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-049",
+      "catalogField": "PREDEL_VOICE_DATA.failure",
+      "mimeType": "audio/mpeg",
+      "byteLength": 72000,
+      "sha256": "65277abf848f19042494df63821e90f972c46f4ef4b70f9fe8b6eabc2bd8d100",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.failure"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-050",
+      "catalogField": "PREDEL_VOICE_DATA.event_pump",
+      "mimeType": "audio/mpeg",
+      "byteLength": 52992,
+      "sha256": "c024b528e7e08a9b6ef548b0daf9d429a28fbe4563a2bce86e7790b2f4bcabc2",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event_pump"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-051",
+      "catalogField": "PREDEL_VOICE_DATA.event_archive",
+      "mimeType": "audio/mpeg",
+      "byteLength": 60480,
+      "sha256": "3237fdf385d89a8be3ee37d5816892e27a6c8ffc2276be060d167f6664c3c5c4",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event_archive"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-052",
+      "catalogField": "PREDEL_VOICE_DATA.event_ice",
+      "mimeType": "audio/mpeg",
+      "byteLength": 45504,
+      "sha256": "b92adde9fa69f994ee51dd1fafbafef61d30189a811eff1f13ef9e7f4e0d0764",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event_ice"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-053",
+      "catalogField": "PREDEL_VOICE_DATA.event_heat",
+      "mimeType": "audio/mpeg",
+      "byteLength": 44928,
+      "sha256": "b0157199b5851f51547fc95168a277bdbd1c04bd52e4f2724f683bf16ad53ad5",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event_heat"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-054",
+      "catalogField": "PREDEL_VOICE_DATA.event_radiation",
+      "mimeType": "audio/mpeg",
+      "byteLength": 40176,
+      "sha256": "80a9899168b5f5ef6913fa587ec5fdb100cf4ef8c94483b529dd1c1b51ecbe44",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event_radiation"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-055",
+      "catalogField": "PREDEL_VOICE_DATA.event_infection",
+      "mimeType": "audio/mpeg",
+      "byteLength": 49248,
+      "sha256": "d48812c0a700b4fea66f1c1bb3a98caa851fda8fcdf25858affe4e8b0c245811",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event_infection"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-056",
+      "catalogField": "PREDEL_VOICE_DATA.event_mutation",
+      "mimeType": "audio/mpeg",
+      "byteLength": 44640,
+      "sha256": "21729a403eab3862e4c9ddbfd9310911b22818389a7ffa0b5057a762e98f8fbe",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event_mutation"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-057",
+      "catalogField": "PREDEL_VOICE_DATA.no_rooms",
+      "mimeType": "audio/mpeg",
+      "byteLength": 50256,
+      "sha256": "146f2284763f696dd4fc3036e7e9120c60441685c84f3099eee0c72ac43b8e65",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.no_rooms"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-058",
+      "catalogField": "PREDEL_VOICE_DATA.event",
+      "mimeType": "audio/mpeg",
+      "byteLength": 48096,
+      "sha256": "b62f3e9d9f997f0eec24f8f16d0a11b2df3e64d0e0b358f06808fba802bb0ce4",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.event"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-059",
+      "catalogField": "PREDEL_VOICE_DATA.saved",
+      "mimeType": "audio/mpeg",
+      "byteLength": 32400,
+      "sha256": "2606d0d002dd4eb37832dddce1d1059ff8ad1887dab20cbc80f9e6933c227878",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.saved"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-060",
+      "catalogField": "PREDEL_VOICE_DATA.month_stable",
+      "mimeType": "audio/mpeg",
+      "byteLength": 62208,
+      "sha256": "0589d22fb5cee8e86d69c3483e5b11420d9bd0404e7b0d012c2fa53bcdc3adcc",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.month_stable"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-061",
+      "catalogField": "PREDEL_VOICE_DATA.external_improving",
+      "mimeType": "audio/mpeg",
+      "byteLength": 56160,
+      "sha256": "69188e99236b9c30251bd594e691e007449654f68087e088d5647f7f1c4a0662",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.external_improving"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-062",
+      "catalogField": "PREDEL_VOICE_DATA.radiation_falling",
+      "mimeType": "audio/mpeg",
+      "byteLength": 68688,
+      "sha256": "787fb671a552d69c6f0cda39e615f31112745bf2e51c9daf6fcd557404c9da42",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.radiation_falling"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-063",
+      "catalogField": "PREDEL_VOICE_DATA.temperature_shelter_stable",
+      "mimeType": "audio/mpeg",
+      "byteLength": 65808,
+      "sha256": "5686076241c01422f0b9f4fbc8d077bc5dd0dee6f6aada44f30302b1f149b6e0",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.temperature_shelter_stable"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-064",
+      "catalogField": "PREDEL_VOICE_DATA.air_shelter_stable",
+      "mimeType": "audio/mpeg",
+      "byteLength": 64656,
+      "sha256": "5bdf6c3df2ce39126f2f55aa9085251064b860b5786c7d319680abd970df64b7",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.air_shelter_stable"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-065",
+      "catalogField": "PREDEL_VOICE_DATA.decon_required",
+      "mimeType": "audio/mpeg",
+      "byteLength": 64080,
+      "sha256": "49d6799459486853eabdb33d10d54c4278afadab20b02bd40018ecfa6839ad11",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.decon_required"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-066",
+      "catalogField": "PREDEL_VOICE_DATA.decon_ready",
+      "mimeType": "audio/mpeg",
+      "byteLength": 68544,
+      "sha256": "47f9440bcca88af82984ab38f8ebbb1a695b2caec40e95576630ec9b8774055b",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.decon_ready"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-067",
+      "catalogField": "PREDEL_VOICE_DATA.fallout_acute",
+      "mimeType": "audio/mpeg",
+      "byteLength": 68976,
+      "sha256": "322a7e162b0d56af3a78cce8af8b04f738fd5cc7feffc4af3d99c89a17d31ca5",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.fallout_acute"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-068",
+      "catalogField": "PREDEL_VOICE_DATA.routes_recovering",
+      "mimeType": "audio/mpeg",
+      "byteLength": 61056,
+      "sha256": "afcfd669b540d54f43530a5c73f6ddf93487393cd412e479e5b9911c99a5ef90",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.routes_recovering"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-069",
+      "catalogField": "PREDEL_VOICE_DATA.routes_reopened",
+      "mimeType": "audio/mpeg",
+      "byteLength": 66384,
+      "sha256": "b7fdd7231b574de518edcc5894e7965e5db984d48a381978dc650378529888a2",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.routes_reopened"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-070",
+      "catalogField": "PREDEL_VOICE_DATA.recovery_cautious",
+      "mimeType": "audio/mpeg",
+      "byteLength": 54000,
+      "sha256": "20b02b79837b9c55f7fe2dfbf2a52894cfac54c5b17768e4b3dac709227bd128",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.recovery_cautious"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-071",
+      "catalogField": "PREDEL_VOICE_DATA.threat_persistent",
+      "mimeType": "audio/mpeg",
+      "byteLength": 56016,
+      "sha256": "6e1386001908baba68f666107fc4c44ac0c7507fde017786c78f707a6fe9a6b7",
+      "sourceFields": [
+        "PREDEL_VOICE_DATA.threat_persistent"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-072",
+      "catalogField": "CINEMA_ASSETS.calm",
+      "mimeType": "image/webp",
+      "byteLength": 563392,
+      "sha256": "b6c9f1e2e1aeb476685f32b28835abd5918a6e4dc0f497a90e39f652a2833218",
+      "sourceFields": [
+        "CINEMA_ASSETS.calm"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-073",
+      "catalogField": "CINEMA_ASSETS.epidemic-late",
+      "mimeType": "image/webp",
+      "byteLength": 479956,
+      "sha256": "b6aae2fd7ab64a5be1e3a457183860d74404e0e1a26f7b1a4638be38abe1eba7",
+      "sourceFields": [
+        "CINEMA_ASSETS.epidemic-late"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-074",
+      "catalogField": "CINEMA_ASSETS.epidemic-mid",
+      "mimeType": "image/webp",
+      "byteLength": 420940,
+      "sha256": "c6e5af9d6ccaab9d69bf5dcaecc5405a4fd0b2440d5b9d2d4b6a1604ac9904cf",
+      "sourceFields": [
+        "CINEMA_ASSETS.epidemic-mid"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-075",
+      "catalogField": "CINEMA_ASSETS.heat-late",
+      "mimeType": "image/webp",
+      "byteLength": 535396,
+      "sha256": "b2f5377f2082ff7ba31a8bca7bc5105ebb83c947d03353017b0f3a21232dcab0",
+      "sourceFields": [
+        "CINEMA_ASSETS.heat-late"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-076",
+      "catalogField": "CINEMA_ASSETS.heat-mid",
+      "mimeType": "image/webp",
+      "byteLength": 528298,
+      "sha256": "f6acd95cd999fdf50a82575dda96c0549b98503e4c9dc87a3be07be669c28b24",
+      "sourceFields": [
+        "CINEMA_ASSETS.heat-mid"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-077",
+      "catalogField": "CINEMA_ASSETS.ice-late",
+      "mimeType": "image/webp",
+      "byteLength": 507504,
+      "sha256": "1d09e435a342da375ccdfef46c653732d16219814a8b2fe7b4368f6796ec256c",
+      "sourceFields": [
+        "CINEMA_ASSETS.ice-late"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-078",
+      "catalogField": "CINEMA_ASSETS.ice-mid",
+      "mimeType": "image/webp",
+      "byteLength": 513698,
+      "sha256": "4b7a2a8b997bf4ced756d7ee4e2e4dfe2356af3cd622c1b3f25ad32561828b9d",
+      "sourceFields": [
+        "CINEMA_ASSETS.ice-mid"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-079",
+      "catalogField": "CINEMA_ASSETS.nuclear-late",
+      "mimeType": "image/webp",
+      "byteLength": 496350,
+      "sha256": "92c7f952f5c5fc8c942c858e6d95f8eb2b3dca879211b26613dffb022f1401a8",
+      "sourceFields": [
+        "CINEMA_ASSETS.nuclear-late"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-080",
+      "catalogField": "CINEMA_ASSETS.nuclear-mid",
+      "mimeType": "image/webp",
+      "byteLength": 497684,
+      "sha256": "15491d542a6582e5388bb40b350f2f77f5250de448e7502d64173e51e6e9b759",
+      "sourceFields": [
+        "CINEMA_ASSETS.nuclear-mid"
+      ],
+      "active": true
+    },
+    {
+      "id": "asset-081",
+      "catalogField": "inactiveVoiceData.intro_ice",
+      "mimeType": "audio/mpeg",
+      "byteLength": 210384,
+      "sha256": "edf0d2a858105653bcb4ea05fa1999c33553b882c903327da302b75abb8704ad",
+      "sourceFields": [],
+      "originalSourceFields": [
+        "PREDEL_VOICE_DATA.intro_ice"
+      ],
+      "active": false
+    },
+    {
+      "id": "asset-082",
+      "catalogField": "inactiveVoiceData.intro_heat",
+      "mimeType": "audio/mpeg",
+      "byteLength": 212688,
+      "sha256": "4bb64bf27f76ceae4cc3035f0a540404462fa78e03da03374cf04e1cd454cdbd",
+      "sourceFields": [],
+      "originalSourceFields": [
+        "PREDEL_VOICE_DATA.intro_heat"
+      ],
+      "active": false
+    },
+    {
+      "id": "asset-083",
+      "catalogField": "inactiveVoiceData.intro_nuclear",
+      "mimeType": "audio/mpeg",
+      "byteLength": 205200,
+      "sha256": "f67c69ac8bac8619c1a8a8dd335804322546fd99cac5fa6b1320cebb3ef45fa9",
+      "sourceFields": [],
+      "originalSourceFields": [
+        "PREDEL_VOICE_DATA.intro_nuclear"
+      ],
+      "active": false
+    },
+    {
+      "id": "asset-084",
+      "catalogField": "inactiveVoiceData.intro_epidemic",
+      "mimeType": "audio/mpeg",
+      "byteLength": 204768,
+      "sha256": "04f666f0a234abb05f8460433ce590743552d3945c6be0e15d03b84038e9de99",
+      "sourceFields": [],
+      "originalSourceFields": [
+        "PREDEL_VOICE_DATA.intro_epidemic"
+      ],
+      "active": false
+    }
+  ]
+}

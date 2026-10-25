@@ -1,0 +1,13 @@
+import * as m0 from './ui/Presentation';
+import * as m2 from './AssetCatalog';
+import * as m3 from './renderer/ShelterCutaway';
+import * as m4 from './audio/Soundscape';
+import * as m7 from './ui/TechTreeModal';
+import * as m10 from './audio/SfxManager';
+import * as m14 from './ui/GatePanel';
+import * as m17 from './ui/Reports';
+import * as m18 from './ui/TopBar';
+import * as m19 from './ui/IncidentModal';
+import * as m20 from './renderer/WeatherEffects';
+import * as m21 from './ui/StartPanel';
+export const viewModules=[m0,m2,m3,m4,m7,m10,m14,m17,m18,m19,m20,m21];

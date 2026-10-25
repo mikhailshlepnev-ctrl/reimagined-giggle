@@ -1,0 +1,187 @@
+[
+  {
+    "id": "engStandards",
+    "branch": "engineering",
+    "knowledge": 12,
+    "name": "Стандартизация узлов",
+    "desc": "Типовые соединения и единые спецификации уменьшают перерасход материалов.",
+    "effects": {
+      "buildDiscount": 0.025
+    }
+  },
+  {
+    "id": "engModular",
+    "branch": "engineering",
+    "knowledge": 28,
+    "name": "Модульное проектирование",
+    "desc": "Унифицированные секции ускоряют строительство и модернизацию.",
+    "effects": {
+      "buildDiscount": 0.035
+    }
+  },
+  {
+    "id": "engDigital",
+    "branch": "engineering",
+    "knowledge": 52,
+    "name": "Расчётное проектирование",
+    "desc": "Точные модели снижают запас прочности там, где он не нужен.",
+    "effects": {
+      "buildDiscount": 0.045
+    }
+  },
+  {
+    "id": "energyControl",
+    "branch": "energy",
+    "knowledge": 16,
+    "name": "Управление нагрузкой",
+    "desc": "Автоматика распределяет энергию и снижает расход топлива.",
+    "effects": {
+      "fuelUseDiscount": 0.05
+    }
+  },
+  {
+    "id": "energyRecovery",
+    "branch": "energy",
+    "knowledge": 34,
+    "name": "Рекуперация энергии",
+    "desc": "Тепло и механическая энергия возвращаются в контуры.",
+    "effects": {
+      "fuelUseDiscount": 0.06
+    }
+  },
+  {
+    "id": "energySmartGrid",
+    "branch": "energy",
+    "knowledge": 58,
+    "name": "Интеллектуальная энергосеть",
+    "desc": "Прогнозирование нагрузки уменьшает потери и аварийный расход.",
+    "effects": {
+      "fuelUseDiscount": 0.08
+    }
+  },
+  {
+    "id": "agriCycles",
+    "branch": "agriculture",
+    "knowledge": 16,
+    "name": "Замкнутые питательные циклы",
+    "desc": "Питательные вещества и вода возвращаются в фермы: урожайность растёт, а расход воды на единицу еды снижается.",
+    "effects": {
+      "foodOutput": 0.06,
+      "farmWaterDiscount": 0.1
+    }
+  },
+  {
+    "id": "agriHydro",
+    "branch": "agriculture",
+    "knowledge": 36,
+    "name": "Высокоплотная гидропоника",
+    "desc": "Точная подача раствора повышает урожайность и резко уменьшает потери воды.",
+    "effects": {
+      "foodOutput": 0.08,
+      "farmWaterDiscount": 0.12
+    }
+  },
+  {
+    "id": "agriProtein",
+    "branch": "agriculture",
+    "knowledge": 60,
+    "name": "Белковые культуры",
+    "desc": "Грибные, водорослевые и микробные линии дают пищу с меньшим водным следом.",
+    "effects": {
+      "foodOutput": 0.1,
+      "farmWaterDiscount": 0.08
+    }
+  },
+  {
+    "id": "medSterile",
+    "branch": "medicine",
+    "knowledge": 18,
+    "name": "Стерильные протоколы",
+    "desc": "Меньше лекарств теряется из-за ошибок и вторичных инфекций.",
+    "effects": {
+      "medicineUseDiscount": 0.06
+    }
+  },
+  {
+    "id": "medDiagnostics",
+    "branch": "medicine",
+    "knowledge": 40,
+    "name": "Расширенная диагностика",
+    "desc": "Раннее выявление осложнений делает лечение точнее.",
+    "effects": {
+      "medicineUseDiscount": 0.07
+    }
+  },
+  {
+    "id": "medBiofab",
+    "branch": "medicine",
+    "knowledge": 66,
+    "name": "Биофармацевтика",
+    "desc": "Фармацевтические линии получают более высокий выход препаратов.",
+    "effects": {
+      "medicineUseDiscount": 0.06,
+      "pharmaOutput": 0.15
+    }
+  },
+  {
+    "id": "indStandards",
+    "branch": "industry",
+    "knowledge": 18,
+    "name": "Технологические карты",
+    "desc": "Производственные операции выполняются с меньшим количеством брака.",
+    "effects": {
+      "industrialInputDiscount": 0.03
+    }
+  },
+  {
+    "id": "indPrecision",
+    "branch": "industry",
+    "knowledge": 38,
+    "name": "Прецизионная обработка",
+    "desc": "Точная обработка снижает расход стали, топлива и электроники.",
+    "effects": {
+      "industrialInputDiscount": 0.04
+    }
+  },
+  {
+    "id": "indAutomation",
+    "branch": "industry",
+    "knowledge": 64,
+    "name": "Автоматизированные линии",
+    "desc": "Контроль качества и машинная обработка резко уменьшают отходы.",
+    "effects": {
+      "industrialInputDiscount": 0.055
+    }
+  },
+  {
+    "id": "comDirectional",
+    "branch": "communications",
+    "knowledge": 20,
+    "name": "Направленная радиосвязь",
+    "desc": "Лучшие антенны и фильтрация сигнала облегчают поиск поселений.",
+    "effects": {
+      "radioBonus": 0.04
+    }
+  },
+  {
+    "id": "comMapping",
+    "branch": "communications",
+    "knowledge": 42,
+    "name": "Цифровая картография",
+    "desc": "Маршруты экспедиций строятся по накопленным данным об опасностях.",
+    "effects": {
+      "expeditionBonus": 0.025
+    }
+  },
+  {
+    "id": "comNetwork",
+    "branch": "communications",
+    "knowledge": 68,
+    "name": "Распределённая сеть",
+    "desc": "Связь и протоколы обмена повышают эффективность торговли.",
+    "effects": {
+      "radioBonus": 0.03,
+      "tradeOutput": 0.08
+    }
+  }
+]

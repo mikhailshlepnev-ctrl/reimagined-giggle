@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ПРЕДЕЛ — модульная версия · V17.1</title>
+<meta name="description" content="Выживание, развитие и восстановление. Predel V17.1: автономное поселение, экспедиции и спасение людей." />
+
+
+<script type="module" src="/src/main.ts"></script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%231b3430%27/%3E%3Ctext x=%278%27 y=%2725%27 fill=%27%23dce9b6%27 font-size=%2726%27%3EП%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<div id="themeBackdrop"></div>
+<canvas id="fxCanvas"></canvas>
+<div id="heatVeil"></div>
+<div id="alertFlash"></div>
+<div id="cinematicOverlay" aria-hidden="true"><canvas id="cinematicCanvas"></canvas><div class="cinematicShade"></div><div class="cinematicCard"><div id="cinematicKicker" class="cinematicKicker"></div><h2 id="cinematicTitle"></h2><p id="cinematicText"></p><div id="cinematicSub" class="cinematicSub"></div></div></div>
+<div class="app">
+  <div class="topbar">
+    <div class="brand"><div class="brandmark">П</div><div><h1>ПРЕДЕЛ</h1><small>Стратегия устойчивого выживания</small></div></div>
+    <div class="topRight">
+      <div id="phasePill" class="phase">Подготовка</div>
+      <div class="saveDock"><button id="saveBtn" type="button">💾 Сохранить</button><button id="loadBtn" type="button">↩ Загрузить</button><span id="saveStatus" class="saveStatus">нет сохранения</span></div>
+      <div class="audioDock">
+        <button id="soundToggle" type="button">🔇 Звук</button>
+        <span class="status" id="soundStatus">атмосфера выключена</span>
+        <input id="volumeSlider" type="range" min="0" max="100" value="45" />
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <aside class="panel" id="leftPanel"></aside>
+    <main class="panel stage">
+      <div class="sceneHero"><canvas id="sceneCanvas" width="1200" height="320"></canvas><div class="sceneContent" id="sceneContent"></div></div>
+      <div class="map"><canvas id="mapCanvas" width="960" height="360"></canvas><div class="mapOverlay"></div></div>
+      <div id="centerContent"></div>
+    </main>
+    <aside class="panel">
+      <h3>События и решения</h3>
+      <div id="eventBox"></div>
+      <div class="section"><h3>Журнал</h3><div class="log" id="log"></div></div>
+      <button class="primary next" id="nextBtn">Следующий месяц</button>
+    </aside>
+  </div>
+</div>
+<div class="overlay" id="startOverlay"><div class="modal" id="startModal"></div></div>
+<div class="overlay" id="endOverlay" style="display:none"><div class="modal" id="endModal"></div></div>
+
+</body>
+</html>
