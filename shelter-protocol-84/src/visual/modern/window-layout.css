@@ -1,0 +1,127 @@
+/* Windows retain one scroll area and keep their controls inside the viewport. */
+.isometricMode .overlay {
+  place-items: start center;
+  align-content: start;
+  padding: max(12px, env(safe-area-inset-top)) max(12px, env(safe-area-inset-right)) max(18px, env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.isometricMode .overlay > .modal,
+.isometricMode .overlay > .introModal {
+  min-width: 0;
+  max-width: min(1180px, 100%);
+  margin: 0 auto;
+  flex-shrink: 0;
+  overflow-wrap: anywhere;
+}
+.isometricMode .overlay > .introModal { max-width: min(1110px, 100%); }
+.isometricMode .overlay.audioSettings > .modal { max-width: min(590px, 100%); }
+.isometricMode .overlay .introWorld {
+  height: auto;
+  min-height: clamp(300px, 32vw, 480px);
+  display: flex;
+  align-items: flex-end;
+}
+.isometricMode .overlay .introTitle {
+  position: relative;
+  inset: auto;
+  width: 100%;
+  padding: 30px 34px;
+}
+.isometricMode .overlay button,
+.isometricMode .overlay select { min-height: 44px; max-width: 100%; white-space: normal; }
+.isometricMode .overlay .introMission { flex-wrap: wrap; }
+.isometricMode .overlay .introMission > div { flex: 1 1 320px; min-width: 0; }
+.isometricMode .overlay .introMission > button { flex-shrink: 0; }
+.isometricMode .overlay .summary > *,
+.isometricMode .overlay .setup > *,
+.isometricMode .overlay .introConditions > * { min-width: 0; }
+.isometricMode .audioSettingRow input { flex-shrink: 0; }
+
+.command2026 .ccDrawer {
+  --window-edge: 16px;
+  width: min(1060px, calc(100vw - 2 * var(--window-edge)));
+  max-width: none;
+  max-height: calc(100dvh - 2 * var(--window-edge));
+  overflow: hidden;
+}
+.command2026 .ccDrawer[open] { display: flex; flex-direction: column; }
+.command2026 .ccDrawer > header {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 0;
+  gap: 16px;
+}
+.command2026 .ccDrawer > header > div { min-width: 0; overflow-wrap: anywhere; }
+.command2026 .ccDrawer > header h2 { font-size: clamp(22px, 3vw, 29px); line-height: 1.2; }
+.command2026 .ccDrawerClose { flex: 0 0 44px; padding: 0; }
+.command2026 .ccDrawerBody {
+  flex: 1 1 auto;
+  min-height: 0;
+  min-width: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scroll-padding: 14px;
+}
+.ccDrawer .ccContent,
+.ccDrawer #centerContent,
+.ccDrawer .locationCard,
+.ccDrawer #tabContent,
+.ccDrawer .cards,
+.ccDrawer .card,
+.ccDrawer .techNode > div,
+.ccDrawer .techMetric { min-width: 0; }
+.ccDrawer :is(p, h2, h3, h4, label, .footerHint, .tag, .req, .techMetric, .opEffect, .costItem, .resource, .mapSiteLink) { overflow-wrap: anywhere; }
+.ccDrawer :is(button, select, input) { max-width: 100%; }
+.ccDrawer button { height: auto; white-space: normal; line-height: 1.5; }
+.ccDrawer .tabHeading { flex-wrap: wrap; align-items: flex-start; }
+.ccDrawer .tabHeading > div { min-width: 0; flex: 1 1 260px; }
+.ccDrawer .tabHeading > button { white-space: normal; }
+.ccDrawer .buildCardHead { flex-wrap: wrap; }
+.ccDrawer .buildCardHead > div { min-width: 0; flex: 1 1 125px; }
+.ccDrawer .availability { white-space: normal; }
+.ccDrawer .costItem > div { flex-wrap: wrap; }
+.ccDrawer .costItem > div > span { white-space: normal; }
+.ccDrawer .techNeed { white-space: normal; text-align: right; max-width: 95px; }
+.ccDrawer .req { flex-wrap: wrap; }
+.ccDrawer .segmented,
+.ccDrawer .partsStock,
+.ccDrawer .offerTerms { flex-wrap: wrap; }
+.ccDrawer .prodTableWrap { max-width: 100%; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.ccDrawer .prodTable { overflow-wrap: normal; }
+.ccDrawer .prodTable th:first-child,
+.ccDrawer .prodTable td:first-child { min-width: 125px; max-width: 200px; white-space: normal; }
+.ccDrawer .physicalLedger,
+.ccDrawer .balancePanel table { display: block; max-width: 100%; overflow-x: auto; overscroll-behavior: contain; }
+.ccDrawer .eventChoices button { text-align: left; }
+.ccDrawer .log { height: auto; max-height: none; overflow: visible; }
+
+@media (max-width: 700px) {
+  .command2026 .ccDrawer { --window-edge: 8px; }
+  .command2026 .ccDrawer > header { padding: 14px; }
+  .command2026 .ccDrawerBody { padding: 14px; }
+  .ccDrawer .costList { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .ccDrawer .techNode { grid-template-columns: 28px minmax(0, 1fr); }
+  .ccDrawer .techNeed { grid-column: 2; max-width: none; text-align: left; }
+  .isometricMode .overlay .summary { grid-template-columns: 1fr; }
+  .isometricMode .overlay .introWorld { min-height: 300px; }
+  .isometricMode .overlay .introTitle { padding: 20px; }
+  .isometricMode .overlay .introTitle h1 { font-size: 29px; }
+}
+@media (max-width: 360px) {
+  .ccDrawer .costList,
+  .ccDrawer .environmentCards,
+  .ccDrawer .techMetrics { grid-template-columns: 1fr; }
+  .ccDrawer .miniMetrics { grid-template-columns: 1fr; }
+  .ccDrawer .medicalCareResult { gap: 10px; padding: 10px; }
+  .isometricMode .startMasthead { flex-wrap: wrap; gap: 6px; }
+  .isometricMode .startMasthead .startTag { margin: 0 0 10px; }
+}
+@media (max-height: 500px) {
+  .command2026 .ccDrawer { --window-edge: 8px; }
+  .command2026 .ccDrawer > header { padding: 10px 16px; }
+  .command2026 .ccDrawer > header h2 { margin-top: 4px; font-size: 23px; }
+  .isometricMode .overlay .introWorld { min-height: 270px; }
+}

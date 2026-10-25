@@ -103,7 +103,7 @@ with sync_playwright() as p:
         title=page.locator('#sceneContent .sceneTitle').text_content();assert 'спокойные' not in title and 'ледяным' in title
         assert page.locator('#sceneCanvas').get_attribute('data-phase')=='3'
         page.locator('.ccDrawerClose').click() if page.locator('.ccDrawer').evaluate('(d)=>d.open') else None
-        page.locator('[data-action="surface"]').click()
+        page.locator('.ccExpand').click()
         page.locator('.sceneHero').screenshot(path=str(RESULTS/'modular-late-world.png'))
         page.locator('.ccDrawerClose').click()
         return True

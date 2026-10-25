@@ -787,7 +787,9 @@ void main(){
   const snow=sc==='ice'&&post,dry=sc==='heat'&&post,poison=sc==='nuclear'&&post;
   const soil=snow?'#71818c':dry?'#6a4c38':poison?'#394139':'#31483e';
   const edge=snow?'#b5c6ce':dry?'#a38762':poison?'#697261':'#6c8070';
-  c.save();c.scale(w/1200,h/540);
+  // Wide main-screen feeds reserve the foreground for the horizon instead of stretching it over the city.
+  const inset=c.canvas?.id==='sceneCanvas'&&w/h>2.5?h*.28:0;
+  c.save();c.translate(0,inset);c.scale(w/1200,(h-inset)/540);
   // The site occupies the foreground while the original photographed world remains in the distance.
   const rgb=[parseInt(soil.slice(1,3),16),parseInt(soil.slice(3,5),16),parseInt(soil.slice(5,7),16)].join(','),ground=c.createLinearGradient(0,316,150,540);
   ground.addColorStop(0,`rgba(${rgb},0)`);ground.addColorStop(.24,`rgba(${rgb},.80)`);ground.addColorStop(.65,soil);ground.addColorStop(1,shade(soil,-.36));
@@ -867,7 +869,9 @@ void main(){
  __ctx.artSettlement=function(c,w,h,ts){
   if(!__ctx.viewState.site){baseSettlement(c,w,h,ts);return;}
   const {post,stage,sc}=condition(),t=(reduced?18000:ts)/1000,b=__ctx.viewState.built||{},energy=__ctx.clamp((__ctx.viewState.bunker?.power||0)/45,.15,1);
-  c.save();c.scale(w/1200,h/540);
+  // Wide main-screen feeds reserve the foreground for the horizon instead of stretching it over the city.
+  const inset=c.canvas?.id==='sceneCanvas'&&w/h>2.5?h*.28:0;
+  c.save();c.translate(0,inset);c.scale(w/1200,(h-inset)/540);
   // The shelter grows with the actual level and built facilities.
   const buildings=Math.min(7,1+stage+(b.habitat||0));
   for(let i=0;i<buildings;i++){

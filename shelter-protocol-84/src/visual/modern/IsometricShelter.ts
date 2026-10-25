@@ -72,6 +72,23 @@ export class IsometricShelter {
   this.line(p(0,125),p(160,125),active?'#efc780':'#86937a',active?3:2);this.line(p(160,0),p(160,125),active?'#efc780':'#86937a',active?3:2);
   const label=p(80,135);c.font='11px system-ui';c.textAlign='center';c.fillStyle=active?'#ffe2a4':'#bdc7b6';c.fillText(room.name.length>24?room.name.slice(0,23)+'…':room.name,label.x,label.y+11);c.font='9px monospace';c.fillStyle='#81958b';c.fillText(room.module?'МОДУЛЬ '+room.level:'ОСНОВНОЙ КОНТУР',label.x,label.y+24);
  }
+ /** The shell follows the installed rooms; it never creates capacity or protection. */
+ private enclosure(front=false){
+  const c=this.context,maxX=Math.max(...this.rooms.map(r=>r.x))+160,maxY=Math.max(...this.rooms.map(r=>r.y))+125;
+  const p=(x:number,y:number,z=0)=>this.point(x,y,z);
+  if(!front){
+   this.poly([p(-24,-24,-20),p(maxX+24,-24,-20),p(maxX+24,maxY+24,-20),p(-24,maxY+24,-20)],'#252f29','#141a16');
+   this.poly([p(-24,-24),p(maxX+24,-24),p(maxX+24,-24,62),p(-24,-24,62)],'#3a4338','#85917a');
+   this.poly([p(-24,-24),p(-24,maxY+24),p(-24,maxY+24,62),p(-24,-24,62)],'#313b32','#71836c');
+   this.line(p(-24,-24,65),p(maxX+24,-24,65),'#9a9e7b',5);this.line(p(-24,-24,65),p(-24,maxY+24,65),'#727e64',5);
+   for(let x=5;x<maxX;x+=50){const q=p(x,-24,38);c.fillStyle='#111b16';c.beginPath();c.arc(q.x,q.y,2.3,0,7);c.fill();}
+   for(let y=5;y<maxY;y+=50){const q=p(-24,y,38);c.fillStyle='#131d16';c.beginPath();c.arc(q.x,q.y,2.3,0,7);c.fill();}
+  }else{
+   this.poly([p(-24,maxY+24,-20),p(maxX+24,maxY+24,-20),p(maxX+24,maxY+24,2),p(-24,maxY+24,2)],'#303d32','#86917a');
+   this.poly([p(maxX+24,-24,-20),p(maxX+24,maxY+24,-20),p(maxX+24,maxY+24,2),p(maxX+24,-24,2)],'#3c4837','#8a9579');
+   this.line(p(-24,maxY+24,3),p(maxX+24,maxY+24,3),'#b3ad7a',3);this.line(p(maxX+24,-24,3),p(maxX+24,maxY+24,3),'#9c9e73',3);
+  }
+ }
  private hit(p:ViewPoint){for(const room of [...this.rooms].reverse()){const a=(p.x/.86+p.y/.43)/2-room.x,b=(p.y/.43-p.x/.86)/2-room.y;if(a>=0&&a<=160&&b>=-35&&b<=135){this.selected=room.id;this.select(room);this.request();return;}}}
  clearSelection(){this.selected='';this.request();}
  selectRoom(id:string){const r=this.rooms.find(r=>r.id===id);if(r){this.selected=id;this.select(r);this.request();}}
@@ -80,12 +97,12 @@ export class IsometricShelter {
  zoom(factor:number){this.viewport.zoomBy(factor);}
  private resize(){const box=this.canvas.getBoundingClientRect();this.width=box.width;this.height=box.height;this.dpr=Math.min(2,devicePixelRatio||1);this.canvas.width=Math.max(1,Math.round(this.width*this.dpr));this.canvas.height=Math.max(1,Math.round(this.height*this.dpr));this.viewport.resize(this.width,this.height);this.fit();}
  private request(){if(!this.frame&&!this.disposed)this.frame=requestAnimationFrame(t=>this.draw(t));}
- private draw(ts:number){this.frame=0;if(this.disposed)return;if(document.hidden){this.last=0;setTimeout(()=>this.request(),500);return;}if(!this.reduced.matches&&ts-this.last<40){this.request();return;}this.last=ts;const c=this.context,t=this.reduced.matches?0:ts/1000;c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);const sky=c.createLinearGradient(0,0,0,this.height);sky.addColorStop(0,'#182b2c');sky.addColorStop(.5,'#101b1d');sky.addColorStop(1,'#080e10');c.fillStyle=sky;c.fillRect(0,0,this.width,this.height);c.save();this.viewport.apply(c);
+ private draw(ts:number){this.frame=0;if(this.disposed)return;if(document.hidden){this.last=0;setTimeout(()=>this.request(),500);return;}if(!this.reduced.matches&&ts-this.last<40){this.request();return;}this.last=ts;const c=this.context,t=this.reduced.matches?0:ts/1000;c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);const sky=c.createLinearGradient(0,0,0,this.height);sky.addColorStop(0,'#151c18');sky.addColorStop(.5,'#111914');sky.addColorStop(1,'#080e0c');c.fillStyle=sky;c.fillRect(0,0,this.width,this.height);c.save();this.viewport.apply(c);
   const extent=Math.max(700,this.rooms.length*28);this.poly([{x:-extent,y:40},{x:extent,y:40},{x:extent,y:extent+500},{x:-extent,y:extent+500}],'#121d1b');
   for(let i=0;i<240;i++){c.fillStyle=i%2?'#85927b0b':'#00000030';c.fillRect((this.hash(i)-.5)*extent*2,50+this.hash(i+555)*(extent+450),12+this.hash(i+8)*25,1);}
+  this.enclosure();
   for(const room of this.rooms){const q=(a:number,b:number)=>this.point(room.x+a,room.y+b);if(room.x/188<2&&this.rooms.some(r=>r.x===room.x+188&&r.y===room.y))this.poly([q(160,45),q(188,45),q(188,85),q(160,85)],'#435047','#7a866944');if(this.rooms.some(r=>r.y===room.y+153&&r.x===room.x))this.poly([q(50,125),q(95,125),q(95,153),q(50,153)],'#435047','#7a866944');}
-  [...this.rooms].sort((a,b)=>(a.x+a.y)-(b.x+b.y)).forEach(room=>this.room(room,t));c.restore();
-  if(this.state.month>(this.state.prepMonths||18)){c.fillStyle=this.state.scenario==='ice'?'#d0e9ec66':this.state.scenario==='heat'?'#dfbb7d44':'#b1c3a83a';for(let i=0;i<32;i++){const x=(this.hash(i)*this.width+t*(this.state.scenario==='ice'?18:5))%this.width,y=(this.hash(i+80)*90+t*3)%100;c.fillRect(x,y,2,2);}}
+  [...this.rooms].sort((a,b)=>(a.x+a.y)-(b.x+b.y)).forEach(room=>this.room(room,t));this.enclosure(true);c.restore();
   const vignette=c.createRadialGradient(this.width/2,this.height/2,100,this.width/2,this.height/2,Math.max(this.width,this.height)*.7);vignette.addColorStop(0,'transparent');vignette.addColorStop(1,'#030a0dbb');c.fillStyle=vignette;c.fillRect(0,0,this.width,this.height);if(!this.reduced.matches)this.request();
  }
  dispose(){this.disposed=true;cancelAnimationFrame(this.frame);this.viewport.dispose();this.observer.disconnect();}
