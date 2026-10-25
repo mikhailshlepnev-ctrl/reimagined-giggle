@@ -16,7 +16,7 @@ export function mountGame(engine:TurnEngine):()=>void {
       return result.value;
     };
     const direct=new Set('showTab setBuildFilter setBuildQuery closeScenarioIntro showScenarioIntro setIntroProgress exportSave importSave generateFinalPDF refreshTradeRisk'.split(' '));
-    r.commands=new Proxy({}, {get:(_,key:string)=>direct.has(key)?(...args:any[])=>r[key](...args):execute(key)});
+    r.commands=new Proxy({}, {get:(_,key:string)=>direct.has(key)?(...args:any[])=>{const value=r[key](...args);if(key==='showTab')r.emit('navigation',args[0]);return value;}:execute(key)});
     for(const module of viewModules)module.define(r);
     // Imported state goes through validation and migration before the current game changes.
     r.importSave=()=>{const input=document.createElement('input');input.type='file';input.accept='.json,application/json';input.onchange=async()=>{const file=input.files?.[0];if(!file)return;if(file.size>5000000){alert('Файл сохранения слишком большой.');return;}const result=engine.loadSave(await file.text());if(!result.ok)alert('Не удалось загрузить сохранение: '+result.error);};input.click();};
@@ -41,7 +41,7 @@ export function mountGame(engine:TurnEngine):()=>void {
         case 'voiceReset':r.PredelAudio?.reset();break;
         case 'voiceStop':r.PredelAudio?.stop();break;
         case 'log':r.PredelAudio?.report(payload.text,payload.kind);break;
-        case 'tab':r.showTab(payload);break;
+        case 'tab':r.showTab(payload);r.emit('navigation',payload);break;
         case 'focus':document.getElementById(payload)?.focus();break;
         case 'saved':r.updateSaveUI();r.renderLog();break;
         case 'deleted':r.initStart();break;
